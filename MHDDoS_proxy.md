@@ -19,6 +19,12 @@
 
 3. **Docker.** Нижче наведено посилання на гайди по тому, як скачувати Docker на різні операційні системи.
    * [Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+   Для Ubuntu Ви також можете використати вже авторський готовий скрипт, який повністю встановить Docker:
+   ```sh
+   curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/docker_install.sh | bash
+   ```
+   
    * [Mac](https://docs.docker.com/desktop/mac/install/)
    * [Windows](https://docs.docker.com/desktop/windows/install/)
 
