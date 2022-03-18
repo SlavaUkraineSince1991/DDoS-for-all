@@ -80,7 +80,7 @@
   <img src="/images/DigitalOcean/destroy.png?raw=true" />
 </p>
 
-17. Далі переходьте за [цим посиланням](https://github.com/SlavaUkraineSince1991/DDoS-info/blob/main/MHDDoS_proxy.md), щоб дізнатися як проводити атаки на цих віртуальних машинах
+17. Далі переходьте за [цим посиланням](https://github.com/SlavaUkraineSince1991/DDoS-for-all/blob/main/MHDDoS_proxy.md), щоб дізнатися як проводити атаки на цих віртуальних машинах
 
 <br/>
 
