@@ -3,6 +3,9 @@
 ##### Script for installing Docker for Ubuntu
 ##### To run it just paste the following command to your Terminal:
 # >>>>> curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/docker_install.sh | bash <<<<<
+##### Then check if Docker was installed by running the following command
+# >>>>> sudo docker --version <<<<<
+##### If output is smth like this: `Docker version 20.10.13, build a224086`, then everything is OK
 
 sudo apt-get update
 sudo apt-get install ca-certificates gnupg lsb-release
