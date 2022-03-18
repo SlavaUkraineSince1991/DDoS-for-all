@@ -56,7 +56,7 @@
    sudo apt-get update
    sudo apt install python3 python3-pip
    ```
-   Також можна встановити Python (і також необхідний код для MHDDoS_proxy) за допмогою готового скрипта: 
+   Також можна встановити Python (і також необхідний код для MHDDoS_proxy) за допомогою готового скрипта: 
    ```sh
    curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/python_git_MHDDoS_proxy_install.sh | bash
    ```
