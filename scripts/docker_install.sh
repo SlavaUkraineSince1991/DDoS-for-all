@@ -2,7 +2,7 @@
 
 ##### Script for installing Docker for Ubuntu
 ##### To run it just paste the following command to your Terminal:
-# >>>>> curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/docker_install.sh | bash
+# >>>>> curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/docker_install.sh | bash <<<<<
 
 sudo apt-get update
 sudo apt-get install ca-certificates gnupg lsb-release
