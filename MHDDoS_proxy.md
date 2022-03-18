@@ -34,6 +34,10 @@
    sudo apt-get update
    sudo apt install python3 python3-pip
    ```
+   Також можна встановити Python (і також необхідний код для MHDDoS_proxy) за дпомогою готового скрипта: 
+   ```sh
+   curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/python_git_MHDDoS_proxy_install.sh | bash
+   ```
    * Mac ([Python](https://docs.python-guide.org/starting/install3/osx/))
    * Windows ([Python](https://www.python.org/ftp/python/3.10.2/python-3.10.2-amd64.exe) [Git](https://github.com/git-for-windows/git/releases/download/v2.35.1.windows.2/Git-2.35.1.2-64-bit.exe))
 
@@ -62,6 +66,11 @@ git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd mhddos_proxy
 git clone https://github.com/MHProDev/MHDDoS.git
 python3 -m pip install -r MHDDoS/requirements.txt
+```
+
+Також у Вас є можливість запустити вже готовий скрипт для Ubuntu, який скачає все необхідне, включаючи Python, Git, усі необхідні залежності, серцевий код із ГітаХабу й тд:
+```sh
+curl -s https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/scripts/python_git_MHDDoS_proxy_install.sh | bash
 ```
 
 Далі просто запускаємо скрипт. Детальніше про параметри скрипта [дивись тут](https://github.com/SlavaUkraineSince1991/DDoS-info/blob/main/MHDDoS_proxy.md#%D1%80%D0%BE%D0%B7%D0%B1%D1%96%D1%80-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%96%D0%B2).
