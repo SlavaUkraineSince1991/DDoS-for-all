@@ -6,7 +6,7 @@
 
 <br/>
 
-1. Переходимо за [цим посиланням](https://www.digitalocean.com/)
+1. Переходимо за [цим посиланням](https://www.digitalocean.com/). Або можна використати [ось це](https://www.digitalocean.com/try/free-trial-offer?utm_campaign=emea_brand_kw_en_cpc&utm_adgroup=digitalocean_credit_exact&_keyword=digitalocean%20promo%20code&_device=c&_adposition=&utm_content=conversion&utm_medium=cpc&utm_source=google&gclid=CjwKCAjw_tWRBhAwEiwALxFPoVDd0Hf4gWRu_LpvHetaMH-ngZMQDnBquNqMCuo-CRWFkGztRCiFLBoCyykQAvD_BwE), щоб одразу отримати 100$ вільного використання на 60 днів (тоді пропускаємо пункти 6 та 7)
 
 2. Реєструємося за допомогою будь-якого способу (найлегше за допомогою вже існуючого Google акаунту)
 
