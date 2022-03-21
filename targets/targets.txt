@@ -1,4 +1,3 @@
-https://ruspravda.info
-http://ruspravda.info
-tcp://95.142.44.8:80
-tcp://95.142.44.8:443
+tcp://87.242.66.56:443
+tcp://87.242.66.56:80
+https://mil.ru
