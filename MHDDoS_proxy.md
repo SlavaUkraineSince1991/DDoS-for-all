@@ -205,7 +205,7 @@ optional arguments:
 
 ## Післямова
 
-Ось і все. Якщо виникають будь-які питання, пишіть їх у коментарях під постами в [цьому Телеграм-каналі](https://t.me/+Z_LFYsLfmmM4YmUy).
+Ось і все. Якщо виникають будь-які питання, пишіть їх у коментарях під постами в [цьому Телеграм-каналі](https://t.me/ddos_for_all).
 
 **Вдалого бомбардування рашистських сайтів! Слава Україні!**
 
@@ -221,7 +221,7 @@ optional arguments:
 * [Посилання на Гіт оригінального MHDDoS](https://github.com/MHProDev/MHDDoS)
 * [Посилання на інший гайд по MHDDoS_proxy](https://telegra.ph/MHDDoS-Proxy-03-13)
 * [Посилання на гайд по оригінальному MHDDoS](https://telegra.ph/Glubokij-razbor-MHDDoS-SHpargalka-03-02)
-* [Посилання на Телеграм-канал DDOS Tutorial for all](https://t.me/+Z_LFYsLfmmM4YmUy)
+* [Посилання на Телеграм-канал DDOS Tutorial for all](https://t.me/ddos_for_all)
 * [Посилання на Телеграм-канал KiberBULL](https://t.me/+NdmAn-xnANNlYjJi)
 * [Посилання на Телеграм-канал Украинский Жнец](https://t.me/+-GoGtA_IsOk3YmE6)
 
@@ -229,4 +229,4 @@ optional arguments:
 <br/>
 <br/>
 
-Гайд підготовлений командою **DDOS Tutorial for all**. [Посилання на Телеграм-канал](https://t.me/+Z_LFYsLfmmM4YmUy)
+Гайд підготовлений командою **DDOS Tutorial for all**. [Посилання на Телеграм-канал](https://t.me/ddos_for_all)
