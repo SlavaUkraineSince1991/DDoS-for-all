@@ -3,4 +3,4 @@
 
 <br/>
 
-Усі гайди підготовлені командою **DDOS Tutorial for all**. [Посилання на Телеграм-канал](https://t.me/+Z_LFYsLfmmM4YmUy)
+Усі гайди підготовлені командою **DDOS Tutorial for all**. [Посилання на Телеграм-канал](https://t.me/ddos_for_all)
