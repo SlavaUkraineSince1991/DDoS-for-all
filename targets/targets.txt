@@ -4,8 +4,8 @@ tcp://185.165.123.228:80
 tcp://185.165.123.228:443
 tcp://185.93.111.122:80
 tcp://185.93.111.122:443
-https://boxberry.ru/
-https://account.boxberry.ru/
+https://boxberry.ru
+https://account.boxberry.ru
 https://api.boxberry.ru
 https://lk.boxberry.ru
 https://service.boxberry.ru
