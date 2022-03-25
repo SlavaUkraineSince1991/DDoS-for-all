@@ -85,7 +85,7 @@ sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest ht
 ```sh
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd mhddos_proxy
-git clone https://github.com/MHProDev/MHDDoS.git
+git clone https://github.com/porthole-ascend-cinnamon/MHDDoS.git
 python3 -m pip install -r MHDDoS/requirements.txt
 ```
 
