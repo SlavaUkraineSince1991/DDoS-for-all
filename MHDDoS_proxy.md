@@ -85,8 +85,7 @@ sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_p
 ```sh
 git clone https://github.com/porthole-ascend-cinnamon/mhddos_proxy.git
 cd mhddos_proxy
-git clone https://github.com/porthole-ascend-cinnamon/MHDDoS.git
-python3 -m pip install -r MHDDoS/requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 Також у Вас є можливість запустити вже готовий скрипт для Ubuntu, який скачає все необхідне, включаючи Python, Git, усі необхідні залежності, серцевий код із ГітаХабу й тд:
