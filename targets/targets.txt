@@ -8,6 +8,3 @@ tcp://185.65.22.17:80
 tcp://185.65.22.17:443
 tcp://185.65.20.5:80
 https://www.cse-rus.ru
-http://ns1.cse.ru
-http://ns2.cse.ru
-http://ns3.cse.ru
