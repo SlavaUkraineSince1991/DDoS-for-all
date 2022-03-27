@@ -62,6 +62,8 @@
    * Mac ([Python](https://docs.python-guide.org/starting/install3/osx/))
    * Windows ([Python](https://www.python.org/ftp/python/3.10.2/python-3.10.2-amd64.exe) [Git](https://github.com/git-for-windows/git/releases/download/v2.35.1.windows.2/Git-2.35.1.2-64-bit.exe))
 
+   Також добрі люди розробили детальний гайд по встановленню MHDDoS_proxy із нуля на Windows. [Ось посилання](https://telegra.ph/Vstanovlennya-mhddos-proxy-napryamu-na-vash-komp-03-27)
+
 <br/>
 
 ## Запуск атаки
