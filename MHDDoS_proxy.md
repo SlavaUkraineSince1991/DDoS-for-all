@@ -112,7 +112,7 @@ python3 runner.py https://ria.ru https://tass.ru
 Взагалі, загальний вигляд команди виглядає так:
 
 ```sh
-sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> -t <threads> -p <period> <--debug> <--vpn> --rpc <n_requests>  --http-methods <list of http_methods>
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> -t <threads> -p <period> <--debug> <--table> <--vpn> --rpc <n_requests>  --http-methods <list of http_methods>
 ```
 
 Одразу ж прошу Вас звернути увагу на параметр -t й експериментально встановити значення для нього для конкретно Вашої машини й Вашого інтернету.
@@ -124,6 +124,7 @@ sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_p
 * `-t <threads>` - загальна кількість потоків. Це один із найважливіших параметрів. Його Ви має старатися підібрати оптимальним саме під Вашу машину. За замовчуванням 1000 * к-сть ядер, але не більше 4000. Дивіться нагрузку на CPU та RAM. Якщо нагружені не на максимум, то можна цей параметр збільшити, проте будьте обережні, бо переважно спочатку нагрузка невелика, а потім починає зростати. Якщо ж навпаки, усе загружено по максимуму, старайтеся цей параметр знижувати. Усе залежить від Вашої машини, кількості ядер, інтернету й тд. Можливі значення: `2000` для 1 та 2 ядер; `4000` для 4 ядер; `6000` для більшої к-сті ядер
 * `-p <period>` - як часто оновлювати проксі. За замовчуванням 900 секунд, тобто кожні 15 хвилин. Впринципі, це значення є оптимальним. Якщо хочете, можете його змінювати
 * `<--debug>` - чи виводити додаткову інформацію, чи ні. Якщо цей параметр присутній, то виводити, якщо ні, то ні. Бажано використовувати, щоб моніторити, чи взагалі проходять атаки, чи ні
+* `<--table>` - чи виводити логи у вигляді таблички
 * `<--vpn>` - прапорець, чи використовувати VPN, чи ні. Якщо цей параметр присутній, то використовувати VPN, якщо ні, то будуть використовуватися проксі. У більшості випадків використовуйте проксі, бо саме в них сила цього скрипту
 * `--rpc <n_requests>` - скільки запитів відправляти, враховуючи одне проксі. За замовчуванням 2000. Впринципі, це значення є оптимальним. Якщо хочете, можете його змінювати
 * `--http-methods <list of http_methods>` - список методів для атаки для HTTP адрес. **Для TCP та UDP адрес передавати не потрібно!** За замовчуванням це методи GET, POST, STRESS, BOT, PPS. Доцільно використовувати, коли для сайту, який ми атакуємо відомий його захист, тоді можна передавати CFB для проходження захисту CloudFlare або CFBUAM для проходження захисту CloudFlare Under Attack Mode. Детальніше про всі методи можна [переглянути тут](https://github.com/MHProDev/MHDDoS#features-and-methods). Якщо ж захист нам невідомий, то доцільно залишити цей параметр дефолтним
@@ -134,8 +135,9 @@ sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_p
 usage: runner.py target [target ...]
                  [-t THREADS] 
                  [-p PERIOD]
+                 [-c URL]
+                 [--table]
                  [--rpc RPC] 
-                 [--debug]
                  [--http-methods METHOD [METHOD ...]]
 
 positional arguments:
@@ -146,7 +148,8 @@ optional arguments:
   -c, --config URL       URL to a config file (list of targets in plain text)
   -t, --threads 2000     Total number of threads to run (default is CPU * 1000)
   -p, --period 900       How often to update the proxies (default is 900)
-  --debug                Enable debug output from MHDDoS
+  --table                Print log as table
+  --vpn                  Disable proxies to use VPN
   --rpc 2000             How many requests to send on a single proxy connection (default is 2000)
   --http-methods GET     List of HTTP(s) attack methods to use.
                          (default is GET, POST, STRESS, BOT, PPS)
