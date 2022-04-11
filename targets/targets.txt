@@ -12,4 +12,4 @@ tcp://46.17.203.102:443
 tcp://46.17.203.45:80
 tcp://46.17.203.45:443
 https://e-kontur.ru
-https://kontur.ru/
+https://kontur.ru
